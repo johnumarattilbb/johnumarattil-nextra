@@ -4,12 +4,9 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 const config: DocsThemeConfig = {
   logo: <span>Johnu Marattil</span>,
   project: {
-    link: 'https://github.com/johnumarattilbb/johnumarattil-me',
+    link: 'https://github.com/johnumarattilbb/johnumarattil-nextra',
   },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/johnumarattilbb/johnumarattil-me',
+  docsRepositoryBase: 'https://github.com/johnumarattilbb/johnumarattil-nextra',
   footer: {
     text: 'Johnu Marattil',
   },
