@@ -8,6 +8,9 @@ dependencies:
   next:
     specifier: ^13.0.6
     version: 13.0.6(react-dom@18.2.0)(react@18.2.0)
+  next-gtag:
+    specifier: ^0.2.0
+    version: 0.2.0(next@13.0.6)(react-dom@18.2.0)(react@18.2.0)
   nextra:
     specifier: latest
     version: 2.2.14(next@13.0.6)(react-dom@18.2.0)(react@18.2.0)
@@ -1926,6 +1929,18 @@ packages:
     resolution: {integrity: sha512-udKGtCCUafD3nQtJg9wBhRP3KMbPglUsgV5JVsXhvyBs/oefqb4sqMEhKBBgqZncYowu58p1prsZQBYvAj/Gww==}
     engines: {node: ^14 || ^16 || >=18}
     hasBin: true
+    dev: false
+
+  /next-gtag@0.2.0(next@13.0.6)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-1sHdKK+clNdC+8eFX8f0Mx8vF3nKo7+FLBnLFk+vQkYsnIQrjImFSmZeAR8mfImraelDriDYqqr/BWWSdbx17w==}
+    peerDependencies:
+      next: '=>11.0.0'
+      react: '=>17.0.0'
+      react-dom: '=>17.0.0'
+    dependencies:
+      next: 13.0.6(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /next-mdx-remote@4.3.0(react-dom@18.2.0)(react@18.2.0):
