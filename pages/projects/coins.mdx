@@ -1,0 +1,48 @@
+# Cocowah Coins: A GPT-Powered Personal Finance and Budgeting Web Application
+Cocowah Coins started because we needed it, but it quickly turned into something we were excited about. We wanted to make managing money easier and better. Even though there are many apps out there, none of them did everything we wanted. My partner was using Excel to keep track of our money when we moved, and it worked well, but we thought we could do better. That's how Cocowah Coins began. It's a web application that helps you handle your money in a new way.
+
+We used some really cool technology to make Cocowah Coins. It uses OpenAI to give you smart tips about your money, AWS Textract + GPT to read your receipts, and React, ExpressJs, Node, Mongo, Typescript, Refine.dev to make everything easy and nice to use. I also used Plaid apis to sync transactions.
+
+<Bleed >
+  ![Landscape](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21256911&authkey=%21AO_lIFmWep0P8I8&width=1863&height=854)
+</Bleed>
+
+One of the best things about Cocowah Coins is how you can scan your shopping receipts. Just add a picture, and the app pulls out all the important info, auto categorize and adds it to along your transactions. This way, keeping track of what you spend is super easy.
+
+There's also a chat feature where you can ask questions about money or get advice. It's like having a smart friend who knows a lot about finances.
+
+We also made it really easy to start using Cocowah Coins. You can sign in with your Google account or your email, and we'll send you a code to make sure it's really you. Once you're in, you'll see a dashboard. It shows you all your money stuff in one place.
+
+So, Cocowah Coins isn't just another budgeting app. It's a whole new way to look at and manage your money, making everything from keeping track of spending to getting financial advice easier than ever before.
+
+import { Bleed } from 'nextra-theme-docs'
+
+<Bleed >
+  ![Landscape](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21256909&authkey=%21APcC6yXa2yZ9Oug&width=1600&height=1164)
+</Bleed>
+
+<Bleed >
+  ![Landscape](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21256910&authkey=%21AJcWwwwXF3FGqcE&width=1863&height=1164)
+</Bleed>
+
+## Identifying the Problem
+
+The project began with a clear identification of the problem: existing personal finance apps lacked the capability to track expenses at a detailed, granular level. This was a significant issue during life changes, such as relocation, where managing finances becomes crucial. The only viable solution at the time was manual tracking using spreadsheets, which was both time-consuming and prone to human error.
+
+## User Research and Understanding the Market
+
+Extensive research was conducted to understand the landscape of existing solutions like Mint and YNAB. It became evident that while these platforms offered budgeting and expense tracking through bank integrations, they fell short in capturing detailed information about each purchase, such as itemized receipts from retailers. Conversations with individuals who prioritize personal finance revealed a divide: older demographics preferred manual paper entry, while younger users leaned towards digital solutions. This insight helped in shaping the direction of Cocowah Coins, aiming to bridge the gap between digital convenience and the desire for detailed record-keeping.
+
+## Prototyping the Solution
+
+The first prototype focused on capturing every transaction detail, making it traceable for users. By integrating DocTR and the GPT API, the application could structure content from receipts, making data easily trackable and organizable. This AI-driven approach significantly outpaced the capabilities of existing vision technologies, offering a swift and efficient way to manage financial data.
+
+To read more about the prototyping - [Link to story published in medium](https://bootcamp.uxdesign.cc/overclocking-personal-finance-management-with-chatgpt-222999a7101d)
+
+## Design and Conceptualization
+
+The design phase involved creating wireframes and building a concept that aligned with user needs. Unlike other apps, Cocowah Coins introduced the ability to capture sub-transaction details through image uploads of receipts, bills, and paychecks. This was achieved by harnessing AI to extract and categorize information at an item level—something as specific as identifying a tomato purchase from a grocery receipt. The design process covered various aspects of the user experience, including onboarding, dashboard navigation, category management, and transaction tracking.
+
+## Development and Technology Stack
+
+The development of Cocowah Coins utilized a full-stack approach with the MERN stack (MongoDB, Express.js, React, and Node.js), integrated with the OpenAI GPT-3.5 Turbo API for its AI capabilities, and AWS Textract for text extraction from images. This combination of technologies ensured a robust, scalable solution capable of handling detailed data processing and providing a user-friendly interface for personal finance management.

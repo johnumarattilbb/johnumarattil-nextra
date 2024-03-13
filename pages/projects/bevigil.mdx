@@ -1,0 +1,185 @@
+
+
+# BeVigil - Applications Security Search Engine UX Design
+At CloudSEK, we started on a mission to empower the community with insights into mobile application security, leveraging the our repository of scan data of a million publicly available apps on the Play Store. Our aim was to facilitate a seamless experience for security professionals, enabling them to effortlessly search and retrieve pertinent information on app security. This case study chronicles our design journey, from initial research and ideation to the development of the final product.
+
+import { Bleed } from 'nextra-theme-docs'
+
+<Bleed >
+  ![Landscape](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21255050&authkey=%21AAV-lKJ1SU9V9Pc&width=5506&height=4748 "Johnu and team ideating solutions for user pain points identified")
+</Bleed>
+
+## Research and Discovery
+When we started working on Bevigil, we really wanted to get to know what the people who would use it, mainly security pros interested in app security, actually needed and what problems they were facing. I kicked things off by talking to a bunch of them and asking questions, making sure we really got the full picture. From all these chats and surveys, we learned a lot:
+
+* What makes their work tough,
+* What they need to make their jobs easier, and
+* How they feel about the tools they currently use.
+
+This gave us a clear idea of how we could make Bevigil something they'd find super useful.
+
+| Pain Points                            | Solutions/Requirements                                                                                     |
+|---------------------------------------|------------------------------------------------------------------------------------------------------------|
+| Lack of visibility into app security     | Centralized platform to search for security of any app, allowing users to investigate apps before they install them                                 |
+| Need for centralized and up-to-date app security information    | Comprehensive and up-to-date app security information, efficient access                                      |
+| Need for Contextual Relevance, tailored insights for specific challenges like Hardcoded API keys in mobile apps | Customized solutions, avoiding generic information                                                          |
+| Filtering Complexity, inefficient refinement of search results     | Intuitive and user-friendly filtering mechanisms, efficient search                                           |
+| Time Sensitivity, quick access to resources                       | Rapid response capability, immediate access to pertinent information                                         |
+| Trustworthiness of Sources, reliance on credible information      | Access to reputable sources, making informed decisions based on credible insights                            |
+<Bleed >
+  ![Landscape](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21255049&authkey=%21AA3COVSdQfdwo6U&width=4192&height=2058 "John and team discussing to ideate solutions for user pain points identified")
+</Bleed>
+
+From what we learned, it was clear that Bevigil had to make a space where security experts could find everything they need about app security all in one place. They also needed personalized help for the unique problems they face. Trust was a big deal; Bevigil had to use information from sources that were reliable so that users could trust their decisions. Keeping all this in mind, we started brainstorming ideas and sketching out our plans.
+
+## Ideation and Wireframing
+Drawing from the insights gained during the research phase, our team began ideating on the user interface and experience design for Bevigil's app security search engine. We aimed to create a user-centric platform that seamlessly integrated powerful app search capabilities with insightful security information. Here are the key features and design considerations we incorporated:
+
+| Idea | Solution |
+|-| -|
+| Centralized Platform | A clean and intuitive interface that serves as a centralized hub for accessing app security information. | 
+|  | Clear navigation paths to ensure users can easily search for and retrieve relevant data. | 
+| Comprehensive Information | Integration of up-to-date app security information gathered from a diverse range of sources, including reputable security databases and research papers.| 
+|  | Customized insights tailored to specific challenges, such as identifying hardcoded API keys, ensuring users have access to actionable intelligence. | 
+| Contextual Relevance | Personalized recommendations and alerts based on user preferences and past search history | 
+|  | Advanced algorithms that analyze app security trends and patterns to deliver relevant insights in real-time. | 
+| Intuitive Filtering Mechanisms | User-friendly filtering options to refine search results based on criteria such as app category, security vulnerabilities, and release date | 
+|  | Dynamic filtering capabilities that adapt to user inputs, simplifying the process of finding pertinent information. | 
+| Rapid Response Capability | Quick access to resources through a responsive and lightweight interface, minimizing load times and ensuring swift navigation. | 
+|  | Seamless integration with mobile devices, enabling users to access Bevigil's search engine on the go. | 
+| Trustworthiness of Sources | Transparent sourcing of data from credible security sources, with clear attribution to ensure accountability and trust. | 
+|  | Seamless integration with mobile devices, enabling users to access Bevigil's search engine on the go. |
+
+Considering the key features to include, we continued into building information hierarchy and plotted comprehensive wireframes to understand the solution. We organized the solution's user flows as follows:
+
+### Onboarding
+This stage takes users through an introduction to the app, summarizing its key features, use cases, and CloudSEK's mission.
+
+<Bleed >
+  ![Landscape](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21255054&authkey=%21AIO8SxdnnNIKo2Q&width=1440&height=820 "John and team discussing to ideate solutions for user pain points identified")
+</Bleed> 
+
+
+### Home
+Users are greeted with a security score and a summary of risks and vulnerabilities detected from scanned information of apps on their device.
+<Bleed>
+  ![Landscape](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21255053&authkey=%21ADnSeOPO6fJG9LQ&width=1440&height=820 "John and team discussing to ideate solutions for user pain points identified")
+</Bleed>
+
+### Device Risk Breakdown
+This Risk Breakdown of an application provides detailed insights into each key risk and vulnerability of the user's device, including its current state and resolution methods.
+
+<Bleed >
+  ![Landscape](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21255056&authkey=%21AOeOUAFwCU4k8Kk&width=1440&height=820 "John and team discussing to ideate solutions for user pain points identified")
+</Bleed>
+
+### App Report
+During the design process, one significant challenge we faced was balancing the depth of information provided with the need for a clean and intuitive interface. We addressed this challenge by conducting additional user research to understand which app security metrics were most valuable to our target users. This helped us prioritize the display of information on the app report page, ensuring that users could quickly access the most relevant insights without feeling overwhelmed by excessive data.
+
+For any given app, whether installed on the device or available on any app store, this page contains detailed information on risks and vulnerabilities such as permissions, trackers, malwares, critical URLs, critical keys, and vulnerabilities.
+<Bleed >
+  ![Landscape](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21255057&authkey=%21ANolVwGi8M7HKz0&width=1440&height=820 "John and team discussing to ideate solutions for user pain points identified")
+</Bleed>
+
+### Search Apps
+This is the heart of the platform, serving as a search engine where users can search for any app from the Play Store, third-party app stores, or from their device. Users can also upload apps to get scanned information, leveraging the repository of scan data for over a million apps.
+<Bleed >
+  ![Landscape](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21255055&authkey=%21AEUA6gnFeOTjavY&width=1440&height=820 "John and team discussing to ideate solutions for user pain points identified")
+</Bleed>
+
+### User Profile
+Users can access and manage their profiles, including personal information, settings, and preferences.
+
+<Bleed >
+  ![Landscape](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21256103&authkey=%21AF1lhNPEQxJw_xY&width=1440&height=820 "John and team discussing to ideate solutions for user pain points identified")
+</Bleed>
+
+### Push Notifications
+Unlike other app security search engines, Bevigil's platform offers on the go scan results and alerts as push notification when news apps are installed on the phone. This feature enhances the user experience by proactively delivering tailored insights, allowing security concerned users to stay ahead of emerging threats without manually sifting through vast amounts of data. 
+<Bleed >
+  ![Landscape](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21255058&authkey=%21ALvKX97YtA9QVrY&width=1440&height=820 "John and team discussing to ideate solutions for user pain points identified")
+</Bleed>
+
+
+### Emails
+CloudSEK can also send important updates and insights via email to ensure users are informed even when they're not actively using the platform.
+
+With these user flows in mind, I proceeded to designing the details user interface visual design, ensuring a seamless and intuitive experience for Bevigil's users.
+
+## Motion & Visual Design
+Once the wireframes were finalized, I moved on to the visual design phase. I aimed for a clean and modern look that aligned with Bevigil's brand identity. The color scheme was chosen to reflect trust and professionalism, while the typography was selected for readability on different devices. High-fidelity mockups were created to showcase the visual elements and interactions within the app.
+
+
+
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+### Splash Screen Logo Animation
+<Bleed>
+  <dotlottie-player 
+src="https://lottie.host/175ea658-f03d-4870-9037-7613a9d170fe/uPhZz5RVGR.json" 
+background="white" 
+speed="1" 
+loop autoplay
+style={{ width: '100%', height: '320px', position: 'relative' }}
+></dotlottie-player>
+</Bleed>
+
+### Onboarding Screen Animations
+<Bleed >
+<div style={{ display: 'flex', gap: 16 ,flexDirection: 'row' }}>
+<dotlottie-player 
+src="https://lottie.host/296f9507-706f-4ea9-ace5-883551d3dfaa/8y1IfLkCNm.json" 
+background="white" 
+speed="1" 
+loop autoplay
+style={{ width: '33%', height: '320px', position: 'relative' }}
+></dotlottie-player>
+<dotlottie-player 
+src="https://lottie.host/a7006d35-e226-4eed-93bf-344bc591aad3/jUqGtIoWYe.json" 
+background="white" 
+speed="1" 
+loop autoplay
+style={{ width: '33%', height: '320px', position: 'relative' }}
+></dotlottie-player>
+<dotlottie-player 
+src="https://lottie.host/f6bc20a0-0cf7-41ff-8bbb-5bf35011f3f2/ZyoTEzguiG.json" 
+background="white" 
+speed="1" 
+loop autoplay
+style={{ width: '33%', height: '320px', position: 'relative' }}
+></dotlottie-player>
+</div>
+</Bleed>
+
+### Home Screen - Device Scan Complete Animation
+<Bleed>
+  <dotlottie-player 
+src="https://lottie.host/8f7001bb-d780-4ba5-b8be-71437c372265/ebVZFT1KMw.json" 
+background="white" 
+speed="1" 
+loop autoplay
+style={{ width: '100%', height: '320px', position: 'relative' }}
+></dotlottie-player>
+</Bleed>
+
+## Prototyping and Testing
+The next step was to create interactive prototypes using design tools. These prototypes were then tested with security professionals to gather feedback on the user experience. The testing phase revealed some usability issues with the search filters, which led to further refinements in the design. The iterative nature of prototyping and testing ensured that the final product would meet the users' expectations.
+
+
+
+## Final Product
+<iframe src="https://drive.google.com/file/d/1KVn5ZNh8lIc3BIX41OBvzG_O-x_tI7q7/preview" width="640" height="480" allow="autoplay"></iframe>
+
+
+After incorporating the feedback from testing, we finalized the design and prepared detailed design specifications for the development team. The app security search engine was launched as part of Bevigil's suite of cybersecurity tools. The feedback from users has been overwhelmingly positive, with many praising the intuitive interface and the efficiency of finding relevant security information.
+
+
+The app security search engine experience design for Bevigil was a collaborative effort that involved thorough research, thoughtful ideation, and rigorous testing. By understanding the users' needs and pain points, we were able to create a solution that significantly improved the way users access app security information. The success of this project reaffirmed the importance of user-centered design in creating impactful digital experiences.
+App Security Search Engine
+
+User feedback on the app security search engine has been overwhelmingly positive, with security professionals praising its efficiency and effectiveness in streamlining their workflow. One user noted, "Bevigil's search engine has revolutionized the way I approach app security. With its intuitive interface and comprehensive insights, I can now quickly assess the security posture of any app and make informed decisions to protect our organization's data." Such testimonials underscore the tangible impact of Bevigil's platform on improving the productivity and effectiveness of security professionals.
+
+This case study demonstrates the comprehensive approach taken in designing the app security search engine for Bevigil. The focus on user research, iterative design, and usability testing was instrumental in delivering a high-quality product that met the needs of security professionals.
+If you have any further questions or need additional details, feel free to ask!
+
+
