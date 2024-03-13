@@ -13,9 +13,9 @@ const config: DocsThemeConfig = {
   footer: {
     text: 'Johnu Marattil',
   },
-  search: { placeholder: 'Search in Johnu Marattil' },
+  search: { placeholder: 'Search here' },
   editLink: {
-    text: 'Suggest changes here →'
+    text: 'Suggest changes →'
   },
   useNextSeoProps() {
     return {
