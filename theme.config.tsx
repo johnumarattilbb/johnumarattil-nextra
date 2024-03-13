@@ -2,7 +2,7 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>Hi, I'm Johnu Marattil</span>,
+  logo: <span>Johnu Marattil</span>,
   project: {
     link: 'https://github.com/johnumarattilbb/johnumarattil-me',
   },
