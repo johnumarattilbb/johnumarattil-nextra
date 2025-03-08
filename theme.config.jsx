@@ -3,7 +3,7 @@ export default {
     project: {
         link: 'https://github.com/johnumarattilbb',
     },
-    docsRepositoryBase: 'https://github.com/yourusername/your-repo/tree/main',
+    docsRepositoryBase: 'https://github.com/johnumarattilbb',
     footer: {
         text: (
             <span>
@@ -16,7 +16,7 @@ export default {
     },
     useNextSeoProps() {
         return {
-            titleTemplate: '%s – Your Project Name'
+            titleTemplate: '%s'
         }
     },
     head: (
