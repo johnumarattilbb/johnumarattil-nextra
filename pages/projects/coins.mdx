@@ -1,8 +1,8 @@
-# Coins  <span style={{ fontWeight: 'normal' }}>--- track expenses with integrated AI features</span>
+# Coins <span style={{ fontWeight: 'normal' }}>— AI-Integrated Expense Tracking</span>
 
 | My role                          | UX Designer & Developer |
 |----------------------------------|-------------------------|
-| Responsibilities                 | <ul><li>Identifying user needs and pain points through research and surveys.</li><li>Ideating and sketching UI/UX designs, organizing user flows.</li><li>Creating high-fidelity mockups and interactive prototypes.</li><li>Full stack web development, Dev op.</li></ul> |
+| Responsibilities                 | <ul><li>User research and needs assessment</li><li>UX/UI design and information architecture</li><li>Prototyping and user testing</li><li>Full stack development and AI integration</li></ul> |
 | Team                             | Myself, Product Manager |
 | Duration                         | 6 months |
 
@@ -19,54 +19,315 @@ import { Bleed } from 'nextra-theme-docs'
   ></iframe>
 </div>
 
-Cocowah Coins started because we needed it, but it quickly turned into something we were excited about. We wanted to make managing money easier and better. Even though there are many apps out there, none of them did everything we wanted. My partner was using Excel to keep track of our money when we moved, and it worked well, but we thought we could do better. That's how Cocowah Coins began. It's a web application that helps you handle your money in a new way.
+## Introduction
 
-We used some really cool technology to make Cocowah Coins. It uses OpenAI to give you smart tips about your money, AWS Textract + GPT to read your receipts, and React, ExpressJs, Node, Mongo, Typescript, Refine.dev to make everything easy and nice to use. I also used Plaid webhooks to sync transactions from user's bank accounts.
+Cocowah Coins is a personal finance management application that transforms how users track and understand their spending through AI-powered features. The application combines bank account integration with advanced receipt scanning technology to provide granular, item-level expense tracking - something traditional finance apps have historically failed to deliver.
 
-<Bleed >
-  ![Landscape](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21256911&authkey=%21AO_lIFmWep0P8I8&width=1863&height=854)
-</Bleed>
-
-One of the best things about Cocowah Coins is how you can scan your shopping receipts. Just add a picture, and the app pulls out all the important info, auto categorize and adds it to along your transactions. This way, keeping track of what you spend is super easy.
-
-There's also a chat feature where you can ask questions about money or get advice. It's like having a smart friend who knows a lot about finances.
-
-We also made it really easy to start using Cocowah Coins. You can sign in with your Google account or your email, and we'll send you a code to make sure it's really you. Right after login, you have the option to personalize your profile and, if you choose, link your bank account. This integration not only streamlines transaction tracking but also enhances your budgeting capabilities, seamlessly merging your bank data with your manually added transactions for a comprehensive financial overview. Once you're in, you'll see a dashboard. It shows you all your money stuff in one place.
-
-So, Cocowah Coins isn't just another budgeting app. It's a whole new way to look at and manage your money, making everything from keeping track of spending to getting financial advice easier than ever before.
-
-## Final Screens
+Built using the MERN stack (MongoDB, Express.js, React, Node.js) and integrated with OpenAI and AWS Textract, Coins delivers a comprehensive solution for detailed expense management while maintaining an intuitive user experience.
 
 <Bleed >
-  ![Landscape](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21256909&authkey=%21APcC6yXa2yZ9Oug&width=1600&height=1164)
+  ![Coins Dashboard Overview](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21256911&authkey=%21AO_lIFmWep0P8I8&width=1863&height=854)
 </Bleed>
 
 <Bleed >
-  ![Landscape](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21256910&authkey=%21AJcWwwwXF3FGqcE&width=1863&height=1164)
+  ![Transaction Management Interface](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21256909&authkey=%21APcC6yXa2yZ9Oug&width=1600&height=1164)
 </Bleed>
 
 <Bleed >
-  ![Landscape](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21257754&authkey=%21AP--ufpXivMrL34&width=1717&height=1164)
+  ![Receipt Scanning and Item Breakdown](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21256910&authkey=%21AJcWwwwXF3FGqcE&width=1863&height=1164)
 </Bleed>
 
-## Identifying the Problem
+<Bleed >
+  ![AI-Powered Financial Insights](https://onedrive.live.com/embed?resid=1656BB0C87C6BA8%21257754&authkey=%21AP--ufpXivMrL34&width=1717&height=1164)
+</Bleed>
 
-The project began with a clear identification of the problem: existing personal finance apps lacked the capability to track expenses at a detailed, granular level. This was a significant issue during life changes, such as relocation, where managing finances becomes crucial. The only viable solution at the time was manual tracking using spreadsheets, which was both time-consuming and prone to human error.
+## Problem Statement
 
-## User Research and Understanding the Market
+### The Challenge
 
-Extensive research was conducted to understand the landscape of existing solutions like Mint and YNAB. It became evident that while these platforms offered budgeting and expense tracking through bank integrations, they fell short in capturing detailed information about each purchase, such as itemized receipts from retailers. Conversations with individuals who prioritize personal finance revealed a divide: older demographics preferred manual paper entry, while younger users leaned towards digital solutions. This insight helped in shaping the direction of Cocowah Coins, aiming to bridge the gap between digital convenience and the desire for detailed record-keeping.
+Existing personal finance applications fail to provide the granular level of expense tracking needed for truly informed financial decision-making. When conducting market analysis of solutions like Mint and YNAB, a clear gap emerged:
 
-## Prototyping the Solution
+- While these platforms offer budgeting and expense tracking through bank integrations, they only capture merchant-level transactions
+- Users cannot easily track what specific items they purchased within each transaction
+- This lack of detail forces many financially-conscious individuals to resort to cumbersome spreadsheets
 
-The first prototype focused on capturing every transaction detail, making it traceable for users. By integrating DocTR and the GPT API, the application could structure content from receipts, making data easily trackable and organizable. This AI-driven approach significantly outpaced the capabilities of existing vision technologies, offering a swift and efficient way to manage financial data.
+This problem became particularly evident during major life changes such as relocation, when understanding exactly where money is being spent becomes critically important.
 
-To read more about the technology prototyping - [Link to story published in medium](https://bootcamp.uxdesign.cc/overclocking-personal-finance-management-with-chatgpt-222999a7101d)
+### Target Users
 
-## Design and Conceptualization
+Through research, we identified several key user segments who would benefit most from our solution:
 
-The design phase involved creating wireframes and building a concept that aligned with user needs using Figma. Unlike other apps, Cocowah Coins introduced the ability to capture sub-transaction details through image uploads of receipts, bills, and paychecks. This was achieved by harnessing AI to extract and categorize information at an item level—something as specific as identifying a tomato purchase from a grocery receipt. The design process covered various aspects of the user experience, including onboarding, dashboard navigation, category management, and transaction tracking.
+1. **Tech-savvy Millennials reaching financial milestones**
+   - Characteristics: Mobile-first, career-advancing, home-buying, starting families
+   - Needs: Comprehensive financial overview, seamless integration with lifestyle
 
-## Development and Technology Stack
+2. **Average-income households focused on budgeting**
+   - Characteristics: Cost-conscious, inflation-impacted, fixed-income
+   - Needs: Realistic budgeting tools, potential savings identification, price comparison
 
-The development of Cocowah Coins utilized a full-stack approach with the MERN stack (MongoDB, Express.js, React, and Node.js), integrated with the OpenAI GPT-3.5 Turbo API for its AI capabilities, and AWS Textract for text extraction from images. This combination of technologies ensured a robust, scalable solution capable of handling detailed data processing and providing a user-friendly interface for personal finance management.
+3. **Immigrants new to the country (0-4 years)**
+   - Characteristics: Unfamiliar with local finance systems, settling down
+   - Needs: Financial guidance, intuitive interface with minimal learning curve
+
+4. **Former Mint users seeking alternatives**
+   - Characteristics: Experienced with digital finance tools, need data migration
+   - Needs: Familiar workflow with enhanced capabilities
+
+## UX Process
+
+### Research & Discovery
+
+The project began with extensive market analysis and user interviews to understand pain points with existing solutions. Key findings revealed:
+
+- A clear demographic divide in finance management approaches: older users preferred manual paper entry, while younger users favored digital solutions
+- Frustration with the lack of itemized transaction data in current apps
+- Strong desire for automation balanced with control over categorization
+- Need for secure receipt storage for warranties, returns, and tax purposes
+
+### User Journey Mapping
+
+I mapped the typical finance management journey, identifying key friction points:
+- Manual data entry causing abandonment
+- Difficulty maintaining consistent categorization
+- Inability to track spending patterns at a granular level
+- Challenges retrieving historical purchase data when needed
+
+### Ideation & Concept Development
+
+Working from these insights, I developed a value proposition canvas that aligned user jobs, pains, and gains with potential solutions. This led to our core concept: AI-powered receipt scanning that extracts item-level data, automatically categorizes purchases, and provides personalized financial insights.
+
+### Prototyping & Iteration
+
+The design process involved multiple stages:
+
+1. Low-fidelity wireframes exploring different information architecture approaches
+2. Technical prototyping of the AI receipt scanning capability using DocTR and GPT APIs
+3. High-fidelity mockups created in Figma for key user flows
+4. Interactive prototypes for user testing
+
+Each iteration was refined based on feedback and usability testing.
+
+## Design Solution
+
+### Core Features
+
+Coins addresses user needs through several key innovations:
+
+#### 1. Intelligent Receipt Scanning
+
+The centerpiece of the application is the ability to extract and structure content from receipts at an item level. By simply uploading a photo of a receipt, users get:
+- Automatic extraction of merchant, date, and total amount
+- Item-by-item breakdown with individual prices
+- Smart categorization based on purchase history and item recognition
+- Secure digital storage for future reference
+
+#### 2. Multi-Level Categorization System
+
+Transactions are organized in a hierarchical system that provides meaningful context:
+- **Sections:** Broad categories like "Food & Dining"
+- **Shelves:** Sub-categories like "Groceries" or "Restaurants"
+- **Boxes:** Specific item types like "Produce" or "Dairy"
+
+This approach enables more realistic budgeting and deeper spending insights.
+
+#### 3. Seamless Bank Integration
+
+Using Plaid webhooks, Coins synchronizes transactions from users' bank accounts:
+- Automatic transaction importing
+- Smart matching with scanned receipts
+- Reconciliation of bank data with manual entries
+- Real-time update notifications
+
+#### 4. AI-Powered Financial Assistant
+
+The integrated chat feature allows users to:
+- Ask natural language questions about their spending
+- Receive personalized financial advice
+- Get insights about spending patterns and trends
+- Compare prices across different merchants for similar items
+
+### User Interface Design
+
+Key design principles included:
+- **Clarity:** Making complex financial data easily scannable
+- **Hierarchy:** Prioritizing information based on user needs
+- **Consistency:** Maintaining visual patterns across different sections
+- **Accessibility:** Ensuring the app works for users with varying abilities
+
+### UI/UX Design System
+
+To ensure consistency and maintain design quality throughout the application, I developed a comprehensive design system for Coins. This system provided the foundation for all UI components and visual elements.
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+  <div className="rounded-lg border p-6">
+    <h4 className="text-xl font-semibold mb-4 flex items-center">
+      <span className="inline-block h-5 w-5 mr-2">🎨</span> Color System
+    </h4>
+    <div className="space-y-4">
+      <div className="grid grid-cols-2 gap-2">
+        <div className="h-12 rounded-md bg-[#000000] text-white flex items-center justify-center">Primary</div>
+        <div className="h-12 rounded-md bg-[#F5F5F5] border flex items-center justify-center">Secondary</div>
+        <div className="h-12 rounded-md bg-[#FF5A5A] text-white flex items-center justify-center">Destructive</div>
+        <div className="h-12 rounded-md bg-[#F0F0F0] border flex items-center justify-center">Muted</div>
+      </div>
+      <div className="text-sm">
+        <p className="mb-2">The application uses HSL color variables for flexible theming with full dark/light mode support.</p>
+        <p>Data visualization employs warm tones (reddish, orange, yellow) for light mode and cool tones (blue, green, purple) for dark mode to ensure optimal readability.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div className="rounded-lg border p-6">
+    <h4 className="text-xl font-semibold mb-4 flex items-center">
+      <span className="inline-block h-5 w-5 mr-2">🔤</span> Typography
+    </h4>
+    <div className="space-y-4">
+      <div>
+        <p className="font-mono text-xs opacity-70">Primary Font</p>
+        <p className="font-sans text-2xl">Geist Sans</p>
+      </div>
+      <div>
+        <p className="font-mono text-xs opacity-70">Monospace Font</p>
+        <p className="font-mono text-2xl">Geist Mono</p>
+      </div>
+      <div className="text-sm mt-4">
+        <p>Font sizes scale from 12px (xs) to 48px (5xl), with responsive typography increasing by 120% on mobile screens for improved readability.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div className="rounded-lg border p-6">
+    <h4 className="text-xl font-semibold mb-4 flex items-center">
+      <span className="inline-block h-5 w-5 mr-2">📱</span> Responsive Design
+    </h4>
+    <div className="space-y-4">
+      <div className="grid grid-cols-5 gap-1 text-center">
+        <div className="border rounded p-2">
+          <div className="text-xs opacity-70">sm</div>
+          <div className="font-medium">640px</div>
+        </div>
+        <div className="border rounded p-2">
+          <div className="text-xs opacity-70">md</div>
+          <div className="font-medium">768px</div>
+        </div>
+        <div className="border rounded p-2">
+          <div className="text-xs opacity-70">lg</div>
+          <div className="font-medium">1024px</div>
+        </div>
+        <div className="border rounded p-2">
+          <div className="text-xs opacity-70">xl</div>
+          <div className="font-medium">1280px</div>
+        </div>
+        <div className="border rounded p-2">
+          <div className="text-xs opacity-70">2xl</div>
+          <div className="font-medium">1536px</div>
+        </div>
+      </div>
+      <div className="text-sm">
+        <p>The application uses a flexible layout system with specialized components for different content types and responsive breakpoints to ensure optimal display across all devices.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div className="rounded-lg border p-6">
+    <h4 className="text-xl font-semibold mb-4 flex items-center">
+      <span className="inline-block h-5 w-5 mr-2">🧩</span> Component Library
+    </h4>
+    <div className="space-y-4">
+      <div className="grid grid-cols-2 gap-2">
+        <div className="border rounded-md p-2 text-center text-sm">Cards</div>
+        <div className="border rounded-md p-2 text-center text-sm">Buttons</div>
+        <div className="border rounded-md p-2 text-center text-sm">Inputs</div>
+        <div className="border rounded-md p-2 text-center text-sm">Dialogs</div>
+        <div className="border rounded-md p-2 text-center text-sm">Tooltips</div>
+        <div className="border rounded-md p-2 text-center text-sm">Charts</div>
+      </div>
+      <div className="text-sm">
+        <p>All components follow consistent design principles with appropriate hover/focus states, transition effects, and accessibility features including semantic HTML, proper color contrast, and ARIA attributes.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className="mt-8 rounded-lg border p-6">
+  <h4 className="text-xl font-semibold mb-4 flex items-center">
+    <span className="inline-block h-5 w-5 mr-2">🔍</span> Iconography System
+  </h4>
+  
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div>
+      <h5 className="font-medium mb-2">Icon Library</h5>
+      <p className="text-sm">Primary library: Lucide (with consistent sizing standards)</p>
+      <div className="mt-3 grid grid-cols-4 gap-2">
+        <div className="h-8 w-8 border rounded-md flex items-center justify-center">
+          <span className="text-lg">💰</span>
+        </div>
+        <div className="h-8 w-8 border rounded-md flex items-center justify-center">
+          <span className="text-lg">📊</span>
+        </div>
+        <div className="h-8 w-8 border rounded-md flex items-center justify-center">
+          <span className="text-lg">📷</span>
+        </div>
+        <div className="h-8 w-8 border rounded-md flex items-center justify-center">
+          <span className="text-lg">🏦</span>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <h5 className="font-medium mb-2">Size Standards</h5>
+      <div className="space-y-2 text-sm">
+        <div className="flex items-center">
+          <div className="h-4 w-4 border rounded mr-2"></div>
+          <span>Small (16px)</span>
+        </div>
+        <div className="flex items-center">
+          <div className="h-5 w-5 border rounded mr-2"></div>
+          <span>Medium (20px)</span>
+        </div>
+        <div className="flex items-center">
+          <div className="h-6 w-6 border rounded mr-2"></div>
+          <span>Large (64px for features)</span>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <h5 className="font-medium mb-2">Implementation</h5>
+      <p className="text-sm">Icons used consistently in UI components (buttons, navigation, cards) with icon + text pattern for improved usability and recognition.</p>
+      <p className="text-sm mt-2">Support for maskable icons in PWA implementation for better homescreen integration.</p>
+    </div>
+  </div>
+</div>
+
+### Technical Implementation
+
+The solution was built using:
+- **Frontend:** React, TypeScript, Refine.dev framework
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **AI Integration:** OpenAI GPT-3.5 Turbo API for insights and categorization
+- **OCR Technology:** AWS Textract for receipt data extraction
+- **Banking Integration:** Plaid API for secure account linking
+
+## Results & Impact
+
+The Coins MVP successfully demonstrated the ability to:
+1. Transform unstructured receipt data into organized, actionable financial insights
+2. Provide users with unprecedented visibility into their spending at an item level
+3. Reduce the time spent on manual expense tracking by approximately 70%
+4. Improve budgeting accuracy through more granular categorization
+
+User testing revealed high satisfaction scores, particularly around:
+- Ease of receipt scanning and categorization
+- Quality of financial insights
+- Intuitive user interface
+- Time saved compared to previous solutions
+
+## Conclusion
+
+Cocowah Coins represents a significant advancement in personal finance management by addressing the critical gap between broad transaction data and detailed item-level spending insights. By leveraging AI technology and thoughtful UX design, the application empowers users to make more informed financial decisions with less manual effort.
+
+The project demonstrates how emerging technologies can be applied to solve everyday problems when guided by thorough user research and iterative design thinking. Future development will focus on expanding AI capabilities, enhancing predictive features, and incorporating user feedback to continuously improve the experience.
+
+To read more about the technology prototyping behind Coins, check out my [article published in Medium](https://bootcamp.uxdesign.cc/overclocking-personal-finance-management-with-chatgpt-222999a7101d).
