@@ -1,8 +1,8 @@
-import { createNextraConfig } from 'nextra'
+const nextra = require('nextra')
 
-const nextConfig = createNextraConfig({
+const withNextra = nextra({
   theme: 'nextra-theme-docs',
   themeConfig: './theme.config.jsx'
 })
 
-export default nextConfig
+module.exports = withNextra()
