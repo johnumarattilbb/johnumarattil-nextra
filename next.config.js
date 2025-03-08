@@ -1,16 +1,8 @@
-const withNextra = require('nextra')({
-  theme: 'nextra-theme-docs',
-  themeConfig: './theme.config.tsx',
-});
+import { createNextraConfig } from 'nextra'
 
-module.exports = withNextra({
-  async redirects() {
-    return [
-      {
-        source: '/projects',
-        destination: '/projects/coins', // Assuming you want to redirect to this path
-        permanent: true, // If this is a permanent redirect, set to true. Change to false if temporary.
-      },
-    ];
-  },
-});
+const nextConfig = createNextraConfig({
+  theme: 'nextra-theme-docs',
+  themeConfig: './theme.config.jsx'
+})
+
+export default nextConfig
