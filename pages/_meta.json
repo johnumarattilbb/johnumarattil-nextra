@@ -4,6 +4,10 @@
   "projects": {
     "title": "Recent Projects",
     "href": "/projects/coins"
+  },
+  "interests": {
+    "title": "Interests",
+    "href": "/interests/photography"
   },  
   "contact": {
     "title": "Contact ↗",
