@@ -1,5 +1,5 @@
 export default {
-    logo: <span><strong>johnu</strong>marattil.me</span>,
+    logo: <span><strong>johnu</strong>marattil</span>,
     project: {
         link: 'https://github.com/johnumarattilbb',
     },
