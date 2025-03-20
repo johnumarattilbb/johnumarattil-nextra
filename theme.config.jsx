@@ -27,4 +27,10 @@ export default {
             <meta name="og:title" content="Your Project Name" />
         </>
     ),
+    search: {
+        placeholder: 'Search'
+    },
+    sidebar: {
+        defaultMenuCollapseLevel: 1
+    },
 } 

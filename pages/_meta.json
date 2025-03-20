@@ -1,5 +1,8 @@
 {
-  "index": "Showcase",
+  "index": {
+    "title": "Welcome",
+    "display": "hidden"
+  },
   "about": "About Me",
   "projects": {
     "title": "Recent Projects",
