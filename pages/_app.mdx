@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Script from 'next/script';
 import { useEffect } from 'react';
 import { Analytics } from '@vercel/analytics/react'
+import ThemeProvider from '../components/ThemeProvider';
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -41,7 +42,9 @@ export default function MyApp({ Component, pageProps }) {
           `,
         }}
       />
-      <Component {...pageProps} />
+      <ThemeProvider>
+        <Component {...pageProps} />
+      </ThemeProvider>
       <Analytics />
     </>
   );
