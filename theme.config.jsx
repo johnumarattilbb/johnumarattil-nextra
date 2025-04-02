@@ -1,5 +1,5 @@
 export default {
-    logo: <span><strong>johnu</strong>marattil</span>,
+    logo: <span className="nx-text-black dark:nx-text-white"><strong>johnu</strong>marattil</span>,
     project: {
         link: 'https://github.com/johnumarattilbb',
     },
@@ -22,7 +22,7 @@ export default {
     head: (
         <>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+            <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
             <meta name="description" content="Johnu Marattil is a UI/UX Engineer from Toronto with 7 years of experience in designing and developing intuitive solutions for enterprise-scale web and mobile applications" />
             <meta name="og:title" content="Portfolio - Johnu Marattil" />
         </>

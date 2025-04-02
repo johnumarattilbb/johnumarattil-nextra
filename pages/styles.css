@@ -13,3 +13,7 @@
   transform: scale(1.01) translateY(-4px); /* Scale up 2% and move up by 8px */
   cursor: pointer;
 }
+
+/* Add your custom styles here */
+
+/* Remove the logo color override as we're now using built-in classes */

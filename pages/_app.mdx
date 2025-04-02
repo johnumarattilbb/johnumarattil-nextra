@@ -22,6 +22,29 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      {/* Preload script to prevent theme flash */}
+      <Script
+        id="theme-script"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              try {
+                const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const storedTheme = localStorage.getItem('theme');
+                
+                if (storedTheme === 'dark' || (storedTheme === 'system' && isDarkMode) || (!storedTheme && isDarkMode)) {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              } catch (e) {
+                console.error('Error in theme initialization:', e);
+              }
+            })();
+          `,
+        }}
+      />
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         strategy="afterInteractive"
