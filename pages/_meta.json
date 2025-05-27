@@ -4,10 +4,8 @@
     "display": "hidden"
   },
   "about": "About Me",
-  "projects": {
-    "title": "Recent Projects",
-    "href": "/projects/coins"
-  },
+  "team-projects": "Team Projects",
+  "self-started-projects": "Self-Started Projects",
   "interests": {
     "title": "Interests",
     "href": "/interests/photography"
