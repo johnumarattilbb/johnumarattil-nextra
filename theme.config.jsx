@@ -1,11 +1,13 @@
 export default {
     logo: <span className="nx-text-black dark:nx-text-white"><strong>johnu</strong>marattil</span>,
+    
+    header: false,
     footer: {
         text: (
             <span>
                 MIT {new Date().getFullYear()} ©{' '}
                 <a href="https://johnumarattil.me" target="_blank">
-                    Your Name
+                    Johnu Marattil
                 </a>
             </span>
         ),
