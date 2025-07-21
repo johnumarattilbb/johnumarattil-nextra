@@ -1,9 +1,5 @@
 export default {
     logo: <span className="nx-text-black dark:nx-text-white"><strong>johnu</strong>marattil</span>,
-    project: {
-        link: 'https://github.com/johnumarattilbb',
-    },
-    docsRepositoryBase: 'https://github.com/johnumarattilbb',
     footer: {
         text: (
             <span>
@@ -27,9 +23,21 @@ export default {
             <meta name="og:title" content="Portfolio - Johnu Marattil" />
         </>
     ),
-    search: {
-        placeholder: 'Search'
-    },
+    search: false,
+    navbar: {
+        links: [
+          // { href: '/contact', children: 'Contact' },
+        ]
+      },
+      feedback: {
+        content: null  // 👈 this hides the feedback link/button
+      },
+      editLink: {
+        component: null  // ⛔ completely disables the link
+      },
+    timestamp: false,
+    pagination: false,
+      
     sidebar: {
         defaultMenuCollapseLevel: 1
     },

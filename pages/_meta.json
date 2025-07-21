@@ -4,16 +4,6 @@
     "display": "hidden"
   },
   "about": "About Me",
-  "team-projects": "Team Projects",
-  "self-started-projects": "Self-Started Projects",
-  "interests": {
-    "title": "Interests",
-    "href": "/interests/photography"
-  },  
-  "contact": {
-    "title": "Contact ↗",
-    "type": "page",
-    "href": "https://www.linkedin.com/in/johnumarattil/",
-    "newWindow": true
-  }
+  "work": "Work",
+  "photography": "Photography"
 }
