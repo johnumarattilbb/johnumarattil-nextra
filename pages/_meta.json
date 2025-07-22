@@ -3,7 +3,9 @@
     "title": "Welcome",
     "display": "hidden"
   },
-  "about": "About Me",
+  "about": {
+    "display": "hidden"
+  },
   "work": "Work",
   "photography": "Photography"
 }

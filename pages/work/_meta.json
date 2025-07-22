@@ -1,8 +1,5 @@
 {
-  "index": {
-    "title": "Featured Projects",
-    "display": "hidden"
-  },
+  "index": "Featured Projects",
   "team-projects": {
     "title": "Team Projects",
     "type": "separator"
